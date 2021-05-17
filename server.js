@@ -6,6 +6,7 @@ const Customer = require("./models/user");
 const Transaction = require("./models/Transact");
 const AllTransact = require("./models/allpay");
 const ejs = require("ejs");
+const AppError = require("./views/AppError");
 
 
 

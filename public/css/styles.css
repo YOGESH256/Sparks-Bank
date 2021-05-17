@@ -1,0 +1,57 @@
+body
+{
+  min-height: 100vh;
+}
+
+.nav-item
+{
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: cursive;
+
+
+
+}
+
+.navbar-brand
+{
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-family: cursive;
+}
+
+
+@media screen and (max-width: 1127px) {
+  .nav-item
+  {
+    font-size: 1.0rem;
+    font-weight: 400;
+    font-family: cursive;
+
+  }
+
+  .btn-lg
+  {
+
+    padding:4px 9px;
+    font-size:90%;
+    line-height: 1.2;
+
+  }
+
+
+}
+
+
+.footer {
+  position: sticky;
+  top:100%;
+
+}
+
+.table-customer
+{
+  width:90%;
+  margin:auto;
+  border:groove;
+}

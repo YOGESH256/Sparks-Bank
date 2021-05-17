@@ -1,0 +1,55 @@
+<%- include("partials/header") -%>
+
+
+
+
+
+
+<div  class="table-responsive my-5 table-customer " >
+  <table class="table">
+    <thead>
+      <tr>
+
+        <th scope="col">Username</th>
+        <th scope="col">Email</th>
+        <th scope="col">Balance</th>
+        <th scope="col">about</th>
+        <th scope="col">Transfer</th>
+        <th scope="col">History</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% Customers.forEach(function(Customer) { %>
+        <tr>
+        <td><%= Customer.username %></td>
+        <td><%= Customer.email %></td>
+        <td><%= Customer.Balance%></td>
+        <td><%= Customer.about%></td>
+        <td> <a class="btn btn-outline-danger" href="/customer/<%= Customer._id %>/history">Transfer history</a></td>
+        <td><a class="btn btn-outline-success mt-1 mt-md-0" href="/customer/<%= Customer._id %>/transfer">Transfer Money</a></td>
+      </tr>
+
+
+      <%});%>
+
+
+
+
+
+
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<%- include("partials/footer") -%>

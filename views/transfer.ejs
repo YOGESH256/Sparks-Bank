@@ -1,0 +1,59 @@
+<%- include("partials/header") -%>
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h1>Tranfer Money</h1>
+                    </div>
+                    <div class="card-body">
+                        <form action="/customer" method="POST" >
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="form">From: </label>
+                                <select class="form-select" name="from" id="from">
+                                    <option style="text-transform: capitalize;" value="<%= fustomer.username %>"  > <%= fustomer.username %> </option>
+                                </select>
+                            </div>
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="cati">Transfer to:</label>
+                                <select class="form-select" name="too" id="cati">
+                                  <% AllCustomers.forEach(function(customer)  { %>
+                      <option style="text-transform: capitalize;" value="<%= customer.username %>" <%= fustomer.username===customer.username?'disabled':'selected' %> ><%= customer.username %></option>
+                             <% }); %>
+                                </select>
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Amount </span>
+                                <input type="number" class="form-control" name="amount" required min="0">
+                                <span class="input-group-text">.00</span>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                  </div>
+                                  <div class="invalid-feedback">
+                                    Enter Amount
+                                  </div>
+                            </div>
+                            <div class="input-group mb-3 ">
+                                <label class="input-group-text" for="com">Comment</label>
+                                <input type="text" class="form-control " name="comment" id="com" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                  </div>
+                                  <div class="invalid-feedback">
+                                    Please give a comment
+                                  </div>
+                            </div>
+                            <button class="btn btn-success">Transfer</button>
+                            <a class="btn btn-dark" href="/">Back to Home</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<%- include("partials/footer") -%>
